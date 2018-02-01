@@ -1,4 +1,5 @@
-@-moz-document domain("slack.com") {
+@-moz-document domain("slack.com") {/* this line is for importing, ignore it if you're copy pasting just the CSS */
+
 /*====== attachment shrinking ======*/
 .c-message_attachment__image {
     max-height: 8em !important;
@@ -103,4 +104,5 @@ pre.special_formatting {
     max-height: 33.3333333vh;
     overflow: auto;
 }
-}
+
+}/* this line is for importing, ignore it if you're copy pasting just the CSS */
