@@ -46,7 +46,11 @@
     z-index:1;
 }
 
-.c-message_attachment__row:nth-child(4) {
+.c-message_attachment__row.c-message_attachment__row--has_trigger {
+	display: none;
+}
+
+.c-message_attachment__row:nth-child(4), .c-message_attachment__row:nth-child(5) {
     max-width: 20em;
     position: absolute;
     top: 0;
