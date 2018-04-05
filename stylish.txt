@@ -1,5 +1,5 @@
-@-moz-document domain("slack.com") {/* this line is for importing, ignore it if you're copy pasting just the CSS */
-
+@-moz-document domain("slack.com") {
+/* https://github.com/Die4Ever/slack-compact-stylish */
 /*====== attachment shrinking ======*/
 .c-message_attachment__image {
     max-height: 8em !important;
@@ -93,6 +93,11 @@
     z-index:0;
 }
 
+/*====== make emojis line up next to eachother better, great for the party parrot conga gif ======*/
+.emoji-sizer {
+	margin: 0 -2px;
+}
+
 /*====== bigger T7G and Stauf emotes ======*/
 .emoji-sizer[style*="stauf"], .emoji-sizer[style*="t7g"] {
     font-size: 32px;
@@ -103,10 +108,9 @@
 }
 
 /*====== scrolling preformatted text ======*/
-pre.special_formatting {
+pre.special_formatting, pre.c-mrkdwn__pre {
     /*max-height: 40em;*/
     max-height: 33.3333333vh;
     overflow: auto;
 }
-
-}/* this line is for importing, ignore it if you're copy pasting just the CSS */
+}
