@@ -1,5 +1,5 @@
 @-moz-document url-prefix("https://app.slack.com/client/") {
-.p-workspace__sidebar, .p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge{
+.p-workspace__sidebar, .p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge, .p-resizer{
     display: none;
 }
 
