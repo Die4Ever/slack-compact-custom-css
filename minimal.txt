@@ -1,10 +1,13 @@
 @-moz-document url-prefix("https://app.slack.com/client/") {
-.p-workspace__sidebar, .p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge, .p-resizer{
+.p-workspace__sidebar, .p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge, .p-resizer, .p-top_nav--dark{
     display: none;
 }
 
 .p-workspace-layout {
     grid-template-columns: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
 }
 
 .c-message_list__day_divider__label__pill {
