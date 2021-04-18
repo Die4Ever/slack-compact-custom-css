@@ -23,7 +23,11 @@
     display: none;
 }
 
+/*====== Removes the attachment message following Sonarr import ======*/
 
+span[data-stringify-text="SonarrBot"] ~ div {
+    display: none;
+}
 
 .p-workspace--iap1.p-workspace--context-pane-collapsed {
     grid-template-columns: 20px;
