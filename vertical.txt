@@ -7,7 +7,7 @@
 MAKE SURE YOU DON'T HAVE BOTH VERTICAL AND MINIMAL ON AT THE SAME TIME! YOU MAY ALSO NEED TO RUNNING STYLISH.TXT
 */
 
-body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__sidebar > div > div.p-ia__sidebar_header.p-ia__sidebar_header--top-nav > button {
+body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__sidebar > div > div.p-ia__sidebar_header.p-ia__sidebar_header--top-nav > button, .p-resizer {
     display: none;
 }
 
