@@ -15,6 +15,11 @@ body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__
     height: 25%;
 }
 
+.p-workspace__sidebar {
+    width: 100% !important;
+}
+
+
 .p-workspace-layout {
     grid-template-rows: 10vh 1fr;
     grid-template-columns: 50% 50%;
@@ -22,7 +27,13 @@ body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__
         "p-workspace__sidebar p-workspace__sidebar"
         "p-workspace__primary_view p-workspace__primary_view";
 }
-
+/* This is specific to me, for when my slack is smaller than the full height of my 2nd monitor
+@media (max-height: calc(2417px - 1px)) {
+    .p-workspace-layout {
+        grid-template-rows: 10vh 1fr;
+    }
+}
+*/
 .c-message_list__day_divider__label__pill {
     display: none;
 }
