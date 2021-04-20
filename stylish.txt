@@ -1,55 +1,28 @@
 @-moz-document domain("slack.com") {
 /* https://github.com/Die4Ever/slack-compact-stylish */
-/*====== attachment shrinking ======*/
-.c-message_attachment__image {
-    max-height: 8em !important;
-    width: 100% !important;
-    height: 8em !important;
-    background-position: 8px 0;
-}
-
-.c-message_attachment_inline .c-message_attachment__image {
-    /* these inline images go below a message without any link preview text, this is for direct links to image files */
-    background-position: 8px 0;
-}
-
-.c-message_attachment__video_thumb, .c-message_attachment__video, .c-message_attachment__video_html {
-    max-height: 8em !important;
-    width: 100% !important;
-}
-
-.c-message_attachment__video_thumb {
-    max-width: 10em;
-}
-
 /*====== allow videos and things to be wide ======*/
-.c-message_attachment__row:last-child, .c-message_attachment__row:last-child > * {
+/*.c-message_attachment__row:last-child, .c-message_attachment__row:last-child > * {
     width: 100% !important;
     height: 100% !important;
 }
-
 /*====== remove outline around thumbnails ======*/
-.c-message_attachment__image, .c-message_attachment__thumb, .c-message_attachment__video_thumb {
+/*.c-message_attachment__image, .c-message_attachment__thumb, .c-message_attachment__video_thumb {
     box-shadow: none !important;
 }
-
 /*====== link preview text and image on same line ======*/
-.c-message__attachments, .c-message_attachment {
+/*.c-message__attachments, .c-message_attachment {
     max-width: 100em;
     position: relative;
 }
-
 .c-message_attachment__row {
     display: inline-block;
     max-width: 40em;
     vertical-align: middle;
     z-index:1;
 }
-
 .c-message_attachment__row.c-message_attachment__row--has_trigger {
 	display: none;
 }
-
 .c-message_attachment__row:nth-child(4), .c-message_attachment__row:nth-child(5) {
     max-width: 20em;
     position: absolute;
@@ -57,33 +30,26 @@
     bottom: 0;
     right: 0;
 }
-
 .c-message_attachment__row:last-child, .c-message_attachment__row:last-child > *, .c-message_attachment__row:last-child > * > .c-message_attachment__image {
     width: 100% !important;
     height: 100% !important;
 }
-
 .c-message_attachment__row:nth-child(1), .c-message_attachment__row:nth-child(2) {
     display:block;
 }
-
 .c-message_attachment__thumb {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index:1;
 }
-
 .c-message_attachment__image {
     background-position: 100% 0;
 }
-
-
 /*====== link title and author/source on same line, requires "link preview text and image on same line" ======*/
-.c-message_attachment__body {
+/*.c-message_attachment__body {
     position: relative;
 }
-
 .c-message_attachment__row:nth-child(1) {
     position: absolute;
     left: 41em;
@@ -92,25 +58,53 @@
     overflow: hidden;
     z-index:0;
 }
-
 /*====== make emojis line up next to eachother better, great for the party parrot conga gif ======*/
 .emoji-sizer {
 	margin: 0 -2px;
 }
-
 /*====== bigger T7G and Stauf emotes ======*/
 .emoji-sizer[style*="stauf"], .emoji-sizer[style*="t7g"] {
     font-size: 32px;
 }
-
 .emoji-only.emoji-sizer[style*="stauf"], .emoji-only.emoji-sizer[style*="t7g"] {
     font-size: 48px;
 }
-
 /*====== scrolling preformatted text ======*/
 pre.special_formatting, pre.c-mrkdwn__pre {
     /*max-height: 40em;*/
     max-height: 33.3333333vh;
     overflow: auto;
 }
+/*
+.p-ia__view_header:not(:hover) {
+    height: 1rem;
+    transition: 0.5s;
+}
+.p-ia__view_header:hover {
+    transition: 0.5s;
+}*/
+/*.p-workspace__sidebar.p-workspace__sidebar--tiny:not(:hover), .p-workspace__sidebar.p-workspace__sidebar--tiny:not(:hover) .c-scrollbar__child {
+    width: 2rem !important;
+    display: none;
+}
+.p-workspace__sidebar, .c-scrollbar__child {
+    transition: 0.5s;
+}*/
+/*.p-workspace__sidebar, .p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge, .p-resizer, .p-top_nav--dark{
+    display: none;
+}*/
+.p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge, .p-top_nav--dark{
+    display: none;
+}
+.p-workspace-layout {
+    grid-template-columns: 1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+.c-message_list__day_divider__label__pill {
+    display: none;
+}
+.p-client--ia-top-nav {
+    grid-template-rows: 0 auto min-content;
 }
