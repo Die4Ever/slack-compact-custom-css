@@ -19,11 +19,6 @@ body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__
     height: 25%;
 }
 
-.p-workspace__sidebar {
-    width: 100% !important;
-}
-
-
 .p-workspace-layout {
     grid-template-rows: 10vh 1fr;
     grid-template-columns: 50% 50%;
