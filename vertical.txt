@@ -1,0 +1,55 @@
+@-moz-document url-prefix("https://app.slack.com/client/") {
+/*.p-workspace__sidebar, .p-ia__view_header, .p-top_nav__sidebar, .p-top_nav__right.p-top_nav--windows:after, .p-top_nav button, .p-top_nav__help__badge, .p-resizer, .p-top_nav--dark{
+    display: none;
+} */
+
+/*Side bar is horizontal above main chat area instead of completely gone for a nice vertical layout
+MAKE SURE YOU DON'T HAVE BOTH VERTICAL AND MINIMAL ON AT THE SAME TIME!
+*/
+
+body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__sidebar > div > div.p-ia__sidebar_header.p-ia__sidebar_header--top-nav > button {
+    display: none;
+}
+
+.p-ia__sidebar_header {
+    height: 25%;
+}
+
+.p-workspace-layout {
+    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "p-workspace__sidebar p-workspace__sidebar"
+        "p-workspace__primary_view p-workspace__primary_view";
+}
+
+.c-message_list__day_divider__label__pill {
+    display: none;
+}
+
+.p-client--ia-top-nav {
+    grid-template-rows: 0 auto min-content;
+}
+
+/*====== Removes the attachment message following Sonarr import ======*/
+
+span[data-stringify-text="SonarrBot"] ~ div {
+    display: none;
+}
+
+/*
+.p-top_nav,  .p-ia__view_header, .c-message_list__day_divider__label__pill{
+    display: none;
+}
+
+
+
+.p-workspace--iap1.p-workspace--context-pane-collapsed {
+    grid-template-columns: 20px;
+}
+
+.p-workspace--iap1.p-workspace--context-pane-collapsed {
+    grid-template-columns: 0px auto;
+}
+*/
+}
