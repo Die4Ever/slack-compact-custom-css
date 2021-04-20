@@ -11,6 +11,10 @@ body > div.p-client_container > div > div.p-workspace-layout > div.p-workspace__
     display: none;
 }
 
+.p-workspace__sidebar {
+    width: 100% !important;
+}
+
 .p-ia__sidebar_header {
     height: 25%;
 }
