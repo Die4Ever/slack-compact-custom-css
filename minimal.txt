@@ -18,14 +18,15 @@
     grid-template-rows: 0 auto min-content;
 }
 
-/*
-.p-top_nav,  .p-ia__view_header, .c-message_list__day_divider__label__pill{
-    display: none;
-}
 
 /*====== Removes the attachment message following Sonarr import ======*/
 
 span[data-stringify-text="SonarrBot"] ~ div {
+    display: none;
+}
+
+/*
+.p-top_nav,  .p-ia__view_header, .c-message_list__day_divider__label__pill{
     display: none;
 }
 
