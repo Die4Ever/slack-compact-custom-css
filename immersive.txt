@@ -1,5 +1,6 @@
 @-moz-document url-prefix("https://app.slack.com/client/") {
 
+/*====== hide the daily pills ======*/
 .c-message_list__day_divider__label__pill {
     display: none;
 }
@@ -16,51 +17,53 @@ pre.special_formatting, pre.c-mrkdwn__pre {
 	margin: 0 -2px;
 }
 
-/* ===== immersive view */
-.p-workspace__primary_view .p-file_drag_drop__container {
-	left: 3rem;
-    right: 0rem;
-    top: 3rem;
-    bottom: 0rem;
-    position: fixed;
-    z-index: 999999;
-    box-shadow: 0px 0px 1rem 1rem #000000a0;
-}
+@media only screen and (max-width:1300px) {
+    /* ===== immersive view */
+    .p-workspace__primary_view .p-file_drag_drop__container {
+        left: 3rem;
+        right: 0rem;
+        top: 3rem;
+        bottom: 0rem;
+        position: fixed;
+        z-index: 999999;
+        box-shadow: 0px 0px 1rem 1rem #000000a0;
+    }
 
-.p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar2__hider:before, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
-    display: none;
-}
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar2__hider:before, .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before, .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before {
+        display: none;
+    }
 
-.p-top_nav:not(:hover) {
-    filter: brightness(75%);
-}
+    .p-top_nav:not(:hover) {
+        filter: brightness(75%);
+    }
 
-.ReactModal__Overlay {
-    z-index: 2999999 !important;
-}
+    .ReactModal__Overlay {
+        z-index: 2999999 !important;
+    }
 
-.p-top_nav:hover {
-    z-index: 1999999;
-    box-shadow: 0px 0px 1rem 1rem #000000a0;
-}
+    .p-top_nav:hover {
+        z-index: 1999999;
+        box-shadow: 0px 0px 1rem 1rem #000000a0;
+    }
 
-.p-workspace__sidebar:not(:hover) .p-channel_sidebar__channel {
-    padding-left: 1rem !important;
-}
+    .p-workspace__sidebar:not(:hover) .p-channel_sidebar__channel {
+        padding-left: 1rem !important;
+    }
 
-.p-workspace__sidebar:not(:hover) {
-    filter: brightness(75%);
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-}
+    .p-workspace__sidebar:not(:hover) {
+        filter: brightness(75%);
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+    }
 
-.p-workspace__sidebar:hover {
-    z-index: 1999999;
-    box-shadow: 0px 0px 1rem 1rem #000000a0;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
+    .p-workspace__sidebar:hover {
+        z-index: 1999999;
+        box-shadow: 0px 0px 1rem 1rem #000000a0;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+    }
 }
 
 }
