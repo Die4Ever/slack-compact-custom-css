@@ -1,10 +1,5 @@
 @-moz-document url-prefix("https://app.slack.com/client/") {
 
-/*====== hide the daily pills ======*/
-.c-message_list__day_divider__label__pill {
-    display: none;
-}
-
 /*====== scrolling preformatted text ======*/
 pre.special_formatting, pre.c-mrkdwn__pre {
     /*max-height: 40em;*/
@@ -17,8 +12,17 @@ pre.special_formatting, pre.c-mrkdwn__pre {
 	margin: 0 -2px;
 }
 
+/* ===== hide some top bars, and fix date pill position ===== */
+.p-view_header, .p-bookmarks_bar_container {
+    display: none;
+}
+
+.c-virtual_list__item--sticky {
+    top: 0px !important;
+}
+
+/* ===== immersive view ===== */
 @media only screen and (max-width:1300px) {
-    /* ===== immersive view */
     .p-workspace__primary_view .p-file_drag_drop__container {
         left: 3rem;
         right: 0rem;
